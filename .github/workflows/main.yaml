@@ -18,4 +18,4 @@ jobs:
       - name: Create a readme.md file
         run: touch readme.md
       - name: Remove readme.md file
-        run: rm -m readme.md
+        run: rm -rf readme.md
