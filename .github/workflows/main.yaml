@@ -1,1 +1,15 @@
 # Learn YAML & Github Actions
+
+name: Learn
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Print Hello Ejajul Ansari
+        run: echo "Hello Ejajul Ansari"
