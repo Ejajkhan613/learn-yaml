@@ -1,20 +1,11 @@
-# YAML GITHUB ACTIONS
+name: My First Workflow
 
-name: Ejajul Ansari github actions
+on: push
 
-on:
-  push:
-    branches: 
-      - main
 jobs:
-  build:
+  xyz:
     runs-on: ubuntu-latest
-  
+
     steps:
-      - uses: actions/checkout@v4
-      - name: NodeJS Version
-        run: node -v
-      - name: Hello World
-        run: echo Hello World
-      - name: Sum of two numbers
-        run : echo $((2+2))
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
