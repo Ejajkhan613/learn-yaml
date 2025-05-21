@@ -14,5 +14,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: NodeJS Version
         run: echo node -v
-      - name: sum of two numbers
-        run: echo 2+2
+      - name: Hello World
+        run: echo Hello World
