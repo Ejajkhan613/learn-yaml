@@ -3,6 +3,7 @@ name: My First Workflow
 on: push
 
 jobs:
+  learning-github-actions:
     runs-on: ubuntu-latest
 
     steps:
