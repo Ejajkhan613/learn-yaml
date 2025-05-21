@@ -3,7 +3,6 @@ name: My First Workflow
 on: push
 
 jobs:
-  xyz:
     runs-on: ubuntu-latest
 
     steps:
