@@ -1,10 +1,10 @@
 name: Hello CI
 
-on: push
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Where to deploy'
+        required: true
+        default: 'staging'
 
-jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hello Step
-        run: echo "🚀 CI/CD just got easier!"
