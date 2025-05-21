@@ -1,11 +1,10 @@
-name: My First Workflow
+name: Hello CI
 
 on: push
 
 jobs:
-  learning-github-actions:
+  say-hello:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Say Hello
-        run: echo "Hello from GitHub Actions!"
+      - name: Hello Step
+        run: echo "🚀 CI/CD just got easier!"
