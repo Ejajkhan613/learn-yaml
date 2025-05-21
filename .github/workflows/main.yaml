@@ -1,21 +1,18 @@
-# Learn YAML & Github Actions
+# YAML GITHUB ACTIONS
 
-name: Learn
+name: Ejajul Ansari github actions
 
 on:
   push:
-    branches: [main]
-
+    branches: 
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
+  
     steps:
-      - uses: actions/checkout@v3
-      - name: Print Hello Ejajul Ansari
-        run: echo "Hello Ejajul Ansari"
-      - name: Check NodeJS Version
-        run: node -v
-      - name: Create a readme.md file
-        run: touch readme.md
-      - name: Remove readme.md file
-        run: rm -rf readme.md
+      - uses: actions/checkout@v4
+      - name: NodeJS Version
+        run: echo node -v
+      - name: sum of two numbers
+        run: echo 2+2
