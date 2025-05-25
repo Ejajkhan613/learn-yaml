@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Loading Codebase
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: Building the project code
         run: echo "Building..."
 
@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Loading Codebase
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: Testing the project code
         run: echo "Testing..."
     
@@ -30,6 +30,6 @@ jobs:
 
     steps:
       - name: Loading Codebase
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: Deploying the project code
         run: echo "Deploying..."
