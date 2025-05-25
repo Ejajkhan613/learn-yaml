@@ -1,10 +1,32 @@
-name: Hello CI
+name: Github Workflow runs when code pushed to main branch
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Where to deploy'
-        required: true
-        default: 'staging'
+  push:
+    branches: main
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    uses: action/checkout@v3
+
+    steps:
+      - name: Building the project code
+        run: echo "Building..."
+
+  test:
+    runs-on: ubuntu-latest
+    uses: action/checkout@v3
+    needs: build
+
+    steps:
+      - name: Testing the project code
+        run: echo "Testing..."
+    
+  deploy:
+    runs-on: ubuntu-latest
+    uses: action/checkout@v3
+    needs: test
+
+    steps:
+      - name: Deploying the project code
+        run: echo "Deploying..."
