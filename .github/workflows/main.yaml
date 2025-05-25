@@ -7,26 +7,29 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    uses: action/checkout@v3
 
     steps:
+      - name: Loading Codebase
+        uses: action/checkout@v3
       - name: Building the project code
         run: echo "Building..."
 
   test:
     runs-on: ubuntu-latest
-    uses: action/checkout@v3
     needs: build
 
     steps:
+      - name: Loading Codebase
+        uses: action/checkout@v3
       - name: Testing the project code
         run: echo "Testing..."
     
   deploy:
     runs-on: ubuntu-latest
-    uses: action/checkout@v3
     needs: test
 
     steps:
+      - name: Loading Codebase
+        uses: action/checkout@v3
       - name: Deploying the project code
         run: echo "Deploying..."
