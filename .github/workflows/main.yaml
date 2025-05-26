@@ -10,7 +10,7 @@ jobs:
     
     steps:
       - name: NodeJS Version
-        run: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: '22'
       - name: NodeJS Version
@@ -22,7 +22,7 @@ jobs:
     
     steps:
       - name: Codebase Checkout
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Build Started
         run: echo "building..."
 
@@ -32,7 +32,7 @@ jobs:
     
     steps:
       - name: Codebase Checkout
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Test Started
         run: echo "Testing..."
 
@@ -42,6 +42,6 @@ jobs:
     
     steps:
       - name: Codebase Checkout
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Deploying Started
         run: echo "Deploying..."
